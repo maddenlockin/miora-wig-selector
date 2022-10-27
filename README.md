@@ -1,27 +1,39 @@
-## The Golden Rule:
+![](./wireframe.png)
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+### html
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+-   h2
+-   label for Wigs
+-   selector for wigs (+ options)
+-   img display
+-   label for location
+-   selector for location (+ options)
+-   img display
+-   section for phrases
+-   h3
+-   input for phrases (type = 'text')
+-   button to add phrase
+-   ul for list display
 
-## Making a plan
+### Learning Objectives
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+-   Use a for/of loop to run a function against every item in an array
+-   In response to a user event, add a new item to a state array and display the new state to the user
+-   Use the .value property to get the value of a 'grabbed' HTML form input tag
+-   Use .createElement() and .append() to display a new HTML tag (with .textContent ) to a grabbed DOM element on click.
+-   Create a select element to create a dropdown.
+-   Use template literals to concatenate strings
+-   Identify what variables are in a given scope/closure
 
-Additional considerations:
+| Events . . .                                                                                                                                          |     |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
+| Select from at least three dropdowns with at least three options each                                                                                 |   2 |
+| On choosing an option from the dropdown and see the change reflected in the UI with a new image                                                       |   1 |
+| On change, See all catchphrases rendered to the DOM                                                                                                   |   2 |
+| When submitting a catchphrase, add it to an array of catchphrases, clear the current DOM's list of catchphrases, and list all catchphrases in the DOM |   1 |
+| See displayed how many times each dropdown has been changed in the current session                                                                    |   1 |
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+| Functions                                                                                                                                   |     |
+| :------------------------------------------------------------------------------------------------------------------------------------------ | --: |
+| IMPURE: `displayStats() : mutates the DOM to display a string describing the counts.`                                                       |   1 |
+| IMPURE: `displayCatchphrases() : clears out the old list from the DOM, loops through catchphrases, renders and appends to the list element` |   2 |
