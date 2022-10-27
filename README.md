@@ -2,13 +2,21 @@
 
 ### html
 
+Slice 1 - Wig selector functionality
+
 -   h2
 -   label for Wigs
 -   selector for wigs (+ options)
 -   img display
+
+Slice 2 - location selector functionality
+
 -   label for location
 -   selector for location (+ options)
 -   img display
+
+Slice 3 - phrases input & list functionality
+
 -   section for phrases
 -   h3
 -   input for phrases (type = 'text')
