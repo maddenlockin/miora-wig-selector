@@ -5,8 +5,13 @@ const wigSelect = document.getElementById('wig-select');
 const wigImg = document.getElementById('wig-img');
 const wigChangeCounter = document.getElementById('wig-change-counter');
 
+const locationSelect = document.getElementById('location-select');
+const locationImg = document.getElementById('location-img');
+const locationChangeCounter = document.getElementById('location-counter');
+
 /* State */
 let wigCounter = 0;
+let locationCounter = 0;
 
 /* Events */
 wigSelect.addEventListener('change', (e) => {
@@ -19,9 +24,17 @@ wigSelect.addEventListener('change', (e) => {
     displayStats();
 });
 
+locationSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    locationImg.src = `./assets/${value}.png`;
+    locationCounter++;
+    displayStats();
+});
+
 /* Display Functions */
 function displayStats() {
     wigChangeCounter.textContent = wigCounter;
+    locationChangeCounter.textContent = locationCounter;
 }
 
 // (don't forget to call any display functions you want to run on page load!)
