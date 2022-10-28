@@ -9,7 +9,7 @@ const locationSelect = document.getElementById('location-select');
 const locationImg = document.getElementById('location-img');
 const locationChangeCounter = document.getElementById('location-counter');
 
-const aphorismInput = document.getElementById('aphorism-imput');
+const aphorismInput = document.getElementById('aphorism-input');
 const addButton = document.getElementById('add-button');
 const aphorismList = document.getElementById('aphorism-list');
 
@@ -34,6 +34,12 @@ locationSelect.addEventListener('change', (e) => {
     locationImg.src = `./assets/${value}.png`;
     locationCounter++;
     displayStats();
+});
+
+addButton.addEventListener('click', (e) => {
+    aphorisms.push(aphorismInput.value);
+    displayAphorisms();
+    aphorismInput.value = '';
 });
 
 /* Display Functions */
