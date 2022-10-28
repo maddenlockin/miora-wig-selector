@@ -9,9 +9,14 @@ const locationSelect = document.getElementById('location-select');
 const locationImg = document.getElementById('location-img');
 const locationChangeCounter = document.getElementById('location-counter');
 
+const aphorismInput = document.getElementById('aphorism-imput');
+const addButton = document.getElementById('add-button');
+const aphorismList = document.getElementById('aphorism-list');
+
 /* State */
 let wigCounter = 0;
 let locationCounter = 0;
+let aphorisms = [];
 
 /* Events */
 wigSelect.addEventListener('change', (e) => {
@@ -35,6 +40,15 @@ locationSelect.addEventListener('change', (e) => {
 function displayStats() {
     wigChangeCounter.textContent = wigCounter;
     locationChangeCounter.textContent = locationCounter;
+}
+
+function displayAphorisms() {
+    aphorismList.textContent = '';
+    for (let aphorism of aphorisms) {
+        const p = document.createElement('p');
+        p.textContent = aphorism;
+        aphorismList.append(p);
+    }
 }
 
 // (don't forget to call any display functions you want to run on page load!)
