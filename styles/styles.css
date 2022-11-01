@@ -27,7 +27,7 @@ img {
     justify-content: center;
 }
 
-.select {
+.select-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;

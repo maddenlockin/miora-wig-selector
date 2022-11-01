@@ -27,38 +27,23 @@
         <header>
             <h1>Which Wig to Wear to Where?</h1>
         </header>
-
         <main>
             <section class="dropdowns">
-                <div id="wigs" class="select">
-                    <select id="wig-select">
-                        <option value="Velma">Velma</option>
-                        <option value="Maureen">Maureen</option>
-                        <option value="Cyndi">Cyndi</option>
-                        <option value="Cher">Cher</option>
-                        <option value="Scarlett">Scarlett</option>
-                    </select>
-                    <img id="wig-img" src="./assets/Velma.png" />
-                    <div class="counter" id="wig-change-counter">You have changed wigs 0 times</div>
+                <div id="wigs-div" class="select-container">
+                    <label>
+                        <select id="wig-select">
+                            <option value="Velma">Velma</option>
+                            <option value="Cyndi">Cyndi</option>
+                            <option value="Grace">Grace</option>
+                            <option value="Maureen">Maureen</option>
+                            <option value="Savannah">Savannah</option>
+                            <option value="Veronica">Veronica</option>
+                            <option value="Scarlett">Scarlett</option>
+                        </select>
+                    </label>
+                    <img id="wig-img" src="/assets/Velma.png" />
+                    <div id="wig-change-counter">You have changed wigs 0 times</div>
                 </div>
-                <div id="locations" class="select">
-                    <select id="location-select">
-                        <option value="Cafe-Tropical">Cafe Tropical</option>
-                        <option value="General-Store">General Store</option>
-                        <option value="Rosebud-Motel">Rosebud Motel</option>
-                        <option value="Town-Hall">Town Hall</option>
-                    </select>
-                    <img id="location-img" src="./assets/Cafe-Tropical.png" />
-                    <div class="counter" id="location-counter">
-                        You have changed locations 0 times
-                    </div>
-                </div>
-            </section>
-            <section class="aphorisms">
-                <h3>Aphorisms</h3>
-                <input id="aphorism-input" type="text" />
-                <button id="add-button">Add</button>
-                <ul id="aphorism-list"></ul>
             </section>
         </main>
     </body>
