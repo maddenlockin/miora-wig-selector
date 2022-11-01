@@ -36,7 +36,7 @@ locationSelect.addEventListener('change', (e) => {
     displayStats();
 });
 
-addButton.addEventListener('click', (e) => {
+addButton.addEventListener('click', () => {
     aphorisms.push(aphorismInput.value);
     displayAphorisms();
     aphorismInput.value = '';
@@ -44,8 +44,8 @@ addButton.addEventListener('click', (e) => {
 
 /* Display Functions */
 function displayStats() {
-    wigChangeCounter.textContent = wigCounter;
-    locationChangeCounter.textContent = locationCounter;
+    wigChangeCounter.textContent = `You have changed wigs ${wigCounter} times`;
+    locationChangeCounter.textContent = `You have changed locations ${locationCounter} times`;
 }
 
 function displayAphorisms() {

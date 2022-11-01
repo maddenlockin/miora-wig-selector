@@ -17,6 +17,7 @@
         <!-- see https://fonts.google.com/ -->
 
         <!-- css -->
+        <link rel="stylesheet" href="styles/styles.css" />
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
         <!-- add link for page specific css -->
@@ -38,7 +39,7 @@
                         <option value="Scarlett">Scarlett</option>
                     </select>
                     <img id="wig-img" src="./assets/Velma.png" />
-                    <div id="wig-change-counter">0</div>
+                    <div class="counter" id="wig-change-counter">You have changed wigs 0 times</div>
                 </div>
                 <div id="locations" class="select">
                     <select id="location-select">
@@ -48,7 +49,9 @@
                         <option value="Town-Hall">Town Hall</option>
                     </select>
                     <img id="location-img" src="./assets/Cafe-Tropical.png" />
-                    <div id="location-counter">0</div>
+                    <div class="counter" id="location-counter">
+                        You have changed locations 0 times
+                    </div>
                 </div>
             </section>
             <section class="aphorisms">
