@@ -14,6 +14,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-left: 10px;
+    font-size: 20px;
 }
 
 img {
@@ -37,11 +38,13 @@ img {
 #wig-img {
     height: 330px;
     width: 300px;
+    margin-top: 5px;
 }
 
 #location-img {
     height: 330px;
     width: 600px;
+    margin-top: 5px;
 }
 
 select {
@@ -51,5 +54,4 @@ select {
 
 .counter {
     padding-top: 5px;
-    font-size: 20px;
 }
