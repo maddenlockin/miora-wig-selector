@@ -29,24 +29,3 @@ header {
 header .logo {
     height: 100%;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
-}
-
-.dropdowns {
-    display: flex;
-    flex-direction: row;
-    align-items: space-between;
-    justify-content: center;
-}
-
-.select {
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-}

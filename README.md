@@ -1,47 +1,52 @@
-![](./wireframe.png)
+![wireframe for moira wig app with html elements outlined]('./assets/Screen Shot 2022-11-01 at 2.31.21 PM.png')
 
-### html
+HTML
 
-Slice 1 - Wig selector functionality
+**Slice 1**
 
--   h2
--   label for Wigs
--   selector for wigs (+ options)
--   img display
+    section for dropdowns
+        div
+            label
+            select
+            - option for each img with values
+            img
+            counter div
 
-Slice 2 - location selector functionality
+**Slice 2**
 
--   label for location
--   selector for location (+ options)
--   img display
+    duplicate above but for location
 
-Slice 3 - phrases input & list functionality
+**Slice 3**
 
--   section for phrases
--   h3
--   input for phrases (type = 'text')
--   button to add phrase
--   ul for list display
+    section for phrases
+        label
+        input for phrases
+        add button
+        ul for list display
 
-### Learning Objectives
+STATE
 
--   Use a for/of loop to run a function against every item in an array
--   In response to a user event, add a new item to a state array and display the new state to the user
--   Use the .value property to get the value of a 'grabbed' HTML form input tag
--   Use .createElement() and .append() to display a new HTML tag (with .textContent ) to a grabbed DOM element on click.
--   Create a select element to create a dropdown.
--   Use template literals to concatenate strings
--   Identify what variables are in a given scope/closure
+-   wig changes (counter) = slice 1
+-   location changes (counter) = slice 2
+-   aphorisms array = slice 3
 
-| Events . . .                                                                                                                                          |     |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
-| Select from at least three dropdowns with at least three options each                                                                                 |   2 |
-| On choosing an option from the dropdown and see the change reflected in the UI with a new image                                                       |   1 |
-| On change, See all catchphrases rendered to the DOM                                                                                                   |   2 |
-| When submitting a catchphrase, add it to an array of catchphrases, clear the current DOM's list of catchphrases, and list all catchphrases in the DOM |   1 |
-| See displayed how many times each dropdown has been changed in the current session                                                                    |   1 |
+EVENTS
 
-| Functions                                                                                                                                   |     |
-| :------------------------------------------------------------------------------------------------------------------------------------------ | --: |
-| IMPURE: `displayStats() : mutates the DOM to display a string describing the counts.`                                                       |   1 |
-| IMPURE: `displayCatchphrases() : clears out the old list from the DOM, loops through catchphrases, renders and appends to the list element` |   2 |
+Slice 1
+
+-   Wig Select (on change)
+    -   user selection used for img display
+    -   increment counter
+    -   update view (display state change)
+
+Slice 2
+
+-   Location Select (on change)
+    -   same as Wig
+
+Slice 3
+
+-   'Add' Button (on click)
+    -   push user's input into phrases display in state
+    -   display all phrases
+    -   (bonus) reset the input value

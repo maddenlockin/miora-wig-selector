@@ -7,24 +7,21 @@ const wigChangeCounter = document.getElementById('wig-change-counter');
 
 const locationSelect = document.getElementById('location-select');
 const locationImg = document.getElementById('location-img');
-const locationChangeCounter = document.getElementById('location-counter');
+const locationChangeCounter = document.getElementById('location-change-counter');
 
 const aphorismInput = document.getElementById('aphorism-input');
-const addButton = document.getElementById('add-button');
 const aphorismList = document.getElementById('aphorism-list');
+const addButton = document.getElementById('add-button');
 
-/* State */
 let wigCounter = 0;
 let locationCounter = 0;
 let aphorisms = [];
 
-/* Events */
 wigSelect.addEventListener('change', (e) => {
-    // on change, grab the user selection and save to a variable
     const value = e.target.value;
-    // apply value to img src with template literal
+    console.log('value', value);
     wigImg.src = `./assets/${value}.png`;
-    //increment wigCounter by 1 for the one change
+    wigImg.alt = `${value} wig`;
     wigCounter++;
     displayStats();
 });
@@ -32,20 +29,21 @@ wigSelect.addEventListener('change', (e) => {
 locationSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     locationImg.src = `./assets/${value}.png`;
+    locationImg.alt = value;
     locationCounter++;
     displayStats();
 });
 
-addButton.addEventListener('click', (e) => {
+addButton.addEventListener('click', () => {
     aphorisms.push(aphorismInput.value);
+    // display all phrases (state change)
     displayAphorisms();
     aphorismInput.value = '';
 });
 
-/* Display Functions */
 function displayStats() {
-    wigChangeCounter.textContent = wigCounter;
-    locationChangeCounter.textContent = locationCounter;
+    wigChangeCounter.textContent = `You have changed wigs ${wigCounter} times`;
+    locationChangeCounter.textContent = `You have changed location ${locationCounter} times`;
 }
 
 function displayAphorisms() {
@@ -56,5 +54,3 @@ function displayAphorisms() {
         aphorismList.append(p);
     }
 }
-
-// (don't forget to call any display functions you want to run on page load!)
