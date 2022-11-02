@@ -2,7 +2,7 @@
 
 HTML
 
-**Slice 1**
+**Slice 1** wig selector functionality
 
     section for dropdowns
         div
@@ -12,17 +12,18 @@ HTML
             img
             counter div
 
-**Slice 2**
+**Slice 2** location select functionality
 
     duplicate above but for location
 
-**Slice 3**
+**Slice 3** phrases input and list display
 
     section for phrases
         label
         input for phrases
         add button
         ul for list display
+            (dynamically render each list el)
 
 STATE
 
@@ -47,6 +48,6 @@ Slice 2
 Slice 3
 
 -   'Add' Button (on click)
-    -   push user's input into phrases display in state
+    -   push user's input into phrases array in state
     -   display all phrases
     -   (bonus) reset the input value
